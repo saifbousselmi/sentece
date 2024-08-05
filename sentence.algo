@@ -1,0 +1,38 @@
+ALGORITHM Sentence
+VAR
+    sentence : STRING
+    vowels = ["a","e","i","o","u","y","A","E","I","O","U","Y"]  
+    lengthCPT : INTEGER
+    index : INTEGER
+    vowelsCPT : INTEGER
+    wordCPT : INTEGER
+   
+BEGIN
+lengthCPT := 0;
+wordCPT := 1 ;
+vowelsCPT := 0;
+   read(sentence)
+   WHILE (sentence[lengthCPT] <> ".") DO
+    lengthCPT = lengthCPT + 1;
+   END_WHILE
+   print (lengthCPT)
+
+   
+   FOR i FROM 0 TO lengthCPT -1   DO
+    IF (sentence[i] = ' ') THEN
+    wordCPT = wordCPT+ 1;
+ 
+    END_IF
+
+    IF (sentence[i] in vowels) THEN
+          vowelsCPT = vowelsCPT+1;
+    END_IF
+   END_FOR
+   print (wordCPT)
+   print (vowelsCPT)
+
+
+
+   
+END
+
