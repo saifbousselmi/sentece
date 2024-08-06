@@ -1,7 +1,7 @@
 ALGORITHM Sentence
 VAR
     sentence : STRING
-    vowels = ["a","e","i","o","u","y","A","E","I","O","U","Y"]  
+    vowels : ARRAY_OF CHAR:=["a","e","i","o","u","y","A","E","I","O","U","Y"] ; 
     lengthCPT : INTEGER
     index : INTEGER
     vowelsCPT : INTEGER
@@ -15,7 +15,7 @@ vowelsCPT := 0;
    WHILE (sentence[lengthCPT] <> ".") DO
     lengthCPT = lengthCPT + 1;
    END_WHILE
-   print (lengthCPT)
+   write (lengthCPT)
 
    
    FOR i FROM 0 TO lengthCPT -1   DO
@@ -28,8 +28,8 @@ vowelsCPT := 0;
           vowelsCPT = vowelsCPT+1;
     END_IF
    END_FOR
-   print (wordCPT)
-   print (vowelsCPT)
+   write (wordCPT)
+   write (vowelsCPT)
 
 
 
